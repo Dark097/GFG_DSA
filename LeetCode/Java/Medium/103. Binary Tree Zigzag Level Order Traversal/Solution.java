@@ -25,24 +25,16 @@ class Solution {
             List<Integer> sublist = new LinkedList<Integer>();
             int levelnum = q.size();
             
-            if(count%2!=0){
             for (int i = 0; i < levelnum; i++) {
                 if (q.peek().left != null)
                     q.offer(q.peek().left);
                 if (q.peek().right != null)
                     q.offer(q.peek().right);
-                sublist.add(q.poll().val);
-            }}
-
-            if(count%2==0){
-            for (int i = 0; i < levelnum; i++) {
-
-                if (q.peek().right != null)
-                    q.offer(q.peek().right);
-                if (q.peek().left != null)
-                    q.offer(q.peek().left);
                 sublist.add(q.poll().val);
             }
+
+            if(count%2!=0){
+            Collections.reverse(sublist);
             }
             wraplist.add(sublist);
             count =count+1;
