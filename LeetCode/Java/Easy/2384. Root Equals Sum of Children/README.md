@@ -8,7 +8,7 @@
 Tree, Binary Tree
 
 ### 🚀 Performance
-- **Runtime:** 66 ms
+- **Runtime:** 0 ms
 - **Memory:** 42.4 MB
 
 ---
